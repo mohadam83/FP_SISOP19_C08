@@ -13,7 +13,8 @@
 pthread_t tid1,tid2;
 char file[60];
 char folder[60]; 
-int scene;
+int scene=1;
+int pil;
 
 typedef struct
 {
@@ -143,8 +144,7 @@ void* menu(void* arg)
             scene = 0;
 
             isifolder(folder);
-            
-            int pil;
+           
             
             printf("Pilih : \n");
             scanf("%d", &pil);
@@ -177,12 +177,10 @@ void* menu(void* arg)
 
 int main()
 {   
-    scene = 1;
-
+    printf("Folder:\n");
     scanf("%s", folder);
     
     isifolder(folder);
-    int pil;
     
     printf("Choice: ");    
     scanf("%d", &pil);
